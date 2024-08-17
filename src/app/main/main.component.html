@@ -1,0 +1,33 @@
+<main class="py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- <div class="col" *ngFor="let item of items">
+        <div class="card h-100">
+          <img src="https://fakeimg.pl/440x320/" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title {{item.name}}</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div> -->
+
+      @for(item of items;track item ) {
+        <div class="col" >
+          <div class="card h-100">
+            <img src="https://fakeimg.pl/440x320/" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title {{item.name}}</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, mollitia!</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</main>
