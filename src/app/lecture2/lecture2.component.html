@@ -5,8 +5,18 @@
       <input type="text" name="" id="" class="form-control" [(ngModel)]="userName" placeholder="user name">
       <button class="btn btn-success" [disabled]="checkedButton()" (click)="reset()">Submit</button>
     </div>
-    <hr>
-  <h1 class="text-center display-1 fw-bold mb-5">{{userName}}</h1>
+    <h1 class="text-center display-1 fw-bold mb-5">{{userName}}</h1>
+    <hr class="my-5">
+
+    <button class="btn btn-primary mb-3 " (click)="toggleShow()">Display Details</button>
+    <h3 class="p-3 rounded text-center" *ngIf="displayPrag">Secret Password = tuna</h3>
+
+    <ul>
+      <li *ngFor="let item of listsEvent ; let i = index">
+        <p class="p-3 rounded" [ngStyle]="{'background-color': i ==4 ?  'blue' : '' }"  [ngClass]="i ==4 ? 'text-white': ''"> Secret Password = tuna {{i+1}}</p>
+
+      </li>
+    </ul>
   </div>
 </section>
 
